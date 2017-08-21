@@ -1,0 +1,41 @@
+[Buildset]
+BuildItems=@Variant(\x00\x00\x00\t\x00\x00\x00\x00\x01\x00\x00\x00\x0b\x00\x00\x00\x00\x01\x00\x00\x00\x1a\x00o\x00r\x00b\x00_\x00l\x00i\x00n\x00e\x00D\x00e\x00b\x00u\x00g)
+
+[CMake]
+Build Directory Count=1
+Current Build Directory Index=0
+ProjectRootRelative=./
+
+[CMake][CMake Build Directory 0]
+Build Directory Path=file:///home/chris/fc/orb_lineDebug/build
+Build Type=Debug
+CMake Binary=file:///usr/bin/cmake
+Environment Profile=
+Extra Arguments=
+Install Directory=file:///usr/local
+
+[Defines And Includes][Compiler]
+Name=GCC
+Path=gcc
+Type=GCC
+
+[Launch]
+Launch Configurations=Launch Configuration 0
+
+[Launch][Launch Configuration 0]
+Configured Launch Modes=execute
+Configured Launchers=nativeAppLauncher
+Name=orb_line
+Type=Native Application
+
+[Launch][Launch Configuration 0][Data]
+Arguments=
+Dependencies=@Variant(\x00\x00\x00\t\x00\x00\x00\x00\x01\x00\x00\x00\x0b\x00\x00\x00\x00\x02\x00\x00\x00\x1a\x00o\x00r\x00b\x00_\x00l\x00i\x00n\x00e\x00D\x00e\x00b\x00u\x00g\x00\x00\x00\x10\x00o\x00r\x00b\x00_\x00l\x00i\x00n\x00e)
+Dependency Action=Build
+EnvironmentGroup=
+Executable=file:///home/chris/fc/orb_lineDebug/
+External Terminal=konsole --noclose --workdir %workdir -e %exe
+Project Target=orb_lineDebug,orb_line
+Use External Terminal=false
+Working Directory=
+isExecutable=false

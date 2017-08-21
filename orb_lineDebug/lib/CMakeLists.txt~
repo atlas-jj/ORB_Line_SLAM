@@ -1,0 +1,1 @@
+add_library (lib norm_dist.cpp)

@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Categories=AudioVideo;Player;Video;
+Name=PangoVideoViewer
+GenericName=Video Viewer
+Comment=View images and video
+Exec=/home/chris/Documents/orbslam2/pangolin/Pangolin/build/tools/VideoViewer/VideoViewer %U
+TryExec=/home/chris/Documents/orbslam2/pangolin/Pangolin/build/tools/VideoViewer/VideoViewer
+Icon=application-x-pango
+Terminal=false
+StartupNotify=false
+MimeType=application/x-pango;image/x-portable-graymap;image/x-portable-pixmap;image/x-tga;image/tiff;image/jpeg;image/png;

@@ -1,0 +1,48 @@
+cmake_minimum_required(VERSION 2.8.3)
+
+project(orb_line)
+
+
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+set(CMAKE_PREFIX_PATH "/home/junjin/opencv3")
+
+set(OpenCV_INCLUDE_DIRS "/home/junjin/opencv3/include")
+set(OpenCV_LIBS "/home/junjin/opencv3/lib/libopencv_core.so.3.2.0"
+"/home/junjin/opencv3/lib/libopencv_line_descriptor.so.3.2.0"
+"/home/junjin/opencv3/lib/libopencv_imgproc.so.3.2.0"
+"/home/junjin/opencv3/lib/libopencv_highgui.so.3.2.0"
+"/home/junjin/opencv3/lib/libopencv_features2d.so.3.2.0"
+"/home/junjin/opencv3/lib/libopencv_calib3d.so.3.2.0"
+)
+
+
+# If the package has been found, several variables will
+# be set, you can find the full list with descriptions
+# in the OpenCVConfig.cmake file.
+# Print some message showing some of them
+message(STATUS "OpenCV library status:")
+message(STATUS "    version: ${OpenCV_VERSION}")
+message(STATUS "    libraries: ${OpenCV_LIBS}")
+message(STATUS "    include path: ${OpenCV_INCLUDE_DIRS}")
+
+
+find_package(catkin REQUIRED COMPONENTS roscpp cv_bridge geometry_msgs std_msgs image_transport)
+find_package(OpenCV 3.2 REQUIRED)
+catkin_package(
+#  INCLUDE_DIRS include
+#  LIBRARIES chris_test1
+#  CATKIN_DEPENDS other_catkin_pkg
+#  DEPENDS system_lib
+)
+#include_directories(${OpenCV_INCLUDE_DIRS})
+ add_executable(orb_line main.cpp)
+include_directories(
+  ${catkin_INCLUDE_DIRS}
+  ${OpenCV_INCLUDE_DIRS}
+)
+
+target_link_libraries(orb_line
+ ${catkin_LIBRARIES}
+ ${OpenCV_LIBS}
+ )
+

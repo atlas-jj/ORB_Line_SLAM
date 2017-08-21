@@ -1,0 +1,36 @@
+[Buildset]
+BuildItems=@Variant(\x00\x00\x00\t\x00\x00\x00\x00\x01\x00\x00\x00\x0b\x00\x00\x00\x00\x01\x00\x00\x00\x04\x00A\x004)
+
+[CMake]
+Build Directory Count=1
+Current Build Directory Index=0
+ProjectRootRelative=./
+
+[CMake][CMake Build Directory 0]
+Build Directory Path=file:///home/junjin/fc/CMPUT631/A4/build
+Build Type=Debug
+CMake Binary=file:///usr/bin/cmake
+Environment Profile=
+Extra Arguments=
+Install Directory=file:///usr/local
+
+[Launch]
+Launch Configurations=Launch Configuration 0
+
+[Launch][Launch Configuration 0]
+Configured Launch Modes=execute
+Configured Launchers=nativeAppLauncher
+Name=A4
+Type=Native Application
+
+[Launch][Launch Configuration 0][Data]
+Arguments=9.png 10.png
+Dependencies=@Variant(\x00\x00\x00\t\x00\x00\x00\x00\x01\x00\x00\x00\x0b\x00\x00\x00\x00\x02\x00\x00\x00\x04\x00A\x004\x00\x00\x00\x04\x00A\x004)
+Dependency Action=Build
+EnvironmentGroup=default
+Executable=file:///home/junjin/fc/CMPUT631/A4/
+External Terminal=konsole --noclose --workdir %workdir -e %exe
+Project Target=A4,A4
+Use External Terminal=false
+Working Directory=file:///home/junjin/fc/CMPUT631/A4/build
+isExecutable=false
