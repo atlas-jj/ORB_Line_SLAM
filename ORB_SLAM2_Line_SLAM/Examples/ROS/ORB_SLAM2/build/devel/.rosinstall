@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/chris/Documents/orbslam2/ORB_SLAM2/Examples/ROS/ORB_SLAM2/build/devel/setup.sh

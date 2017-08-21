@@ -1,0 +1,34 @@
+<launch>
+	<!-- Name of the map to use (without path nor extension) and initial position -->
+    <arg name="map_file"       default="map"/> <!-- robopark_plan -->
+    <arg name="world_file"     default="world"/>
+    <arg name="initial_pose_x" default="0.0"/>
+    <arg name="initial_pose_y" default="0.0"/>
+    <arg name="initial_pose_a" default="0.0"/>
+
+  	<!--  ****** Maps *****  -->
+  	<!--<node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)">-->
+    	<!--<param name="global" value="/map"/>-->
+  	<!--</node>-->
+  	
+  	<arg name="scan_topic"  default="scan" />
+	<node pkg="gmapping" type="slam_gmapping" name="slam" output="screen">
+		<param name="base_frame" value="cameraPose" />
+		<param name="odom" value="cameraPose" />
+		<param name="map_frame" value="world" />
+		<param name="map_update_interval" value="4" />
+		<!--<param name="linearUpdate" value="0.1" />-->
+		<!--<param name="angularUpdate" value="0.05" />-->
+		<!--<param name="maxRange" value="5" />-->
+		<param name="xmin" value="-5" /> 
+		<param name="xmax" value="5" /> 
+		<param name="ymin" value="-5" /> 
+		<param name="ymax" value="5" /> 
+		<param name="delta" value="0.05" />
+		<param name="occ_thresh" value="0.25" />
+		<param name="map_update_interval" value="5.0"/>
+		<param name="particles" value="50"/>
+		<param name="resampleThreshold" value="0.5"/>
+
+	</node>
+</launch>

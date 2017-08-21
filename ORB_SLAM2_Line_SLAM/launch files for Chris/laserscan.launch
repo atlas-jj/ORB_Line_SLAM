@@ -1,0 +1,10 @@
+<launch>
+	<arg name="camera" default="camera" />
+	<node pkg="pointcloud_to_laserscan" type="pointcloud_to_laserscan_node" name="pc_to_ls">
+		<param name="target_frame" value="cameraPose" />
+		<param name="use_inf" value="true" />
+		<param name="range_min" value="-1.0" />
+		<param name="range_max" value="80" />
+	</node>
+</launch>
+	

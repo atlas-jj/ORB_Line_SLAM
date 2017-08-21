@@ -1,0 +1,38 @@
+compile:
+1 ORB-SLAM library:chmod +x build.sh
+                   ./build.sh
+2 
+
+export ROS_PACKAGE_PATH=${ROS_PACKAGE_PATH}:/home/chris/Documents/orbslam2/ORB_SLAM2/Examples/ROS
+source /home/chris/Documents/orbslam2/ORB_SLAM2/Examples/ROS/ORB_SLAM2/build/devel/setup.bash
+
+cd /home/chris/Documents/orbslam2/ORB_SLAM2
+
+source /home/chris/catkin_ws/devel/setup.bash
+rosrun orb_line orb_line /usb_cam/image_raw:=/image_raw
+
+cd orbslam2/ORB_SLAM
+1.roscore
+2.roslaunch pointcloud_to_laserscan laserscan.launch
+3.rosrun rviz rviz -d /home/parallels/project.rviz
+4.rosrun ORB_SLAM2 Mono Vocabulary/ORBvoc.txt Examples/Monocular/cs.yaml /camera/image_raw:=/usb_cam/image_raw
+//
+rosrun ORB_SLAM2 Mono Vocabulary/ORBvoc.txt Examples/Monocular/lsd-room.yaml /camera/image_raw:=/image_raw
+
+rosrun ORB_SLAM2 Mono Vocabulary/ORBvoc.txt Examples/Monocular/lsd-machine.yaml /camera/image_raw:=/image_raw
+
+rosrun ORB_SLAM2 Mono Vocabulary/ORBvoc.txt Examples/Monocular/KITTI00-02.yaml /camera/image_raw:=/kitti_stereo/left/image_rect
+
+rosrun ORB_SLAM2 Mono Vocabulary/ORBvoc.txt Examples/Monocular/KITTI04-12.yaml /camera/image_raw:=/kitti_stereo/left/image_rect
+
+5.rosbag play lab.bag
+6.roslaunch gmapping mapping.launch
+7.rosrun map_server map_saver -f /home/parallels/lab
+
+
+rosrun orb_line orb_line /usb_cam/image_raw:=/image_raw
+
+rosbag play /media/chris/文件往来/UofA/CMPUT631/Project/kitti_00.bag
+rosbag play /media/chris/文件往来/UofA/CMPUT631/Project/kitti_05.bag
+
+
