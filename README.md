@@ -1,6 +1,8 @@
 # ORB_Line_SLAM
 line feature based SLAM, modified based on the famous ORB-SLAM2
 
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-no-red.svg)](https://bitbucket.org/lbesson/ansi-colors)
+
 --------------------------
 + This repository served as my CMPUT630 Course Project in 2017.
 + This repository is **no longer maintained** since I moved my interest to robot manipulation research.
